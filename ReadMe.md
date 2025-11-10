@@ -22,4 +22,27 @@
     pip install -r requirements.txt
     ```
 
+1. If any changes made in code:
+    - Laptop: github extension
+    - Laptop: `+` to add all the files
+    - Laptop: Type commit message and press `Commit`
+    - Laptop: Press `push` button
+    - AWS:
+        ```bash
+        ssh -i face_server_new_key.pem ubuntu@<ip_address>
+        ```
+    - AWS server:
+        ```bash
+        cd aws_face_detection
+        source venv/bin/activate
+        git pull
+        ```
+    - Run the app:
+        ```bash
+        flask run --host 0.0.0.0
+        ```
+    - Check in browser:
+        ```
+        https://<ip_address>:5000
+        ```
 
