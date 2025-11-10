@@ -37,4 +37,4 @@ app = create_app()
 
 if __name__ == '__main__':
     # 'adhoc' for HTTPS, required by some browsers for webcam
-    app.run(debug=True, ssl_context='adhoc')
+    app.run(debug=True, ssl_context='adhoc', host='0.0.0.0')
